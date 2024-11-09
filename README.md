@@ -41,7 +41,7 @@ Salam API مجموعه‌ای از api‌های سرویس‌های باسلام
 </ul>
 حالا باید با استفاده از code دریافتی ریکوئستی به فرمت زیر ارسال کنید که توکن کاربر را دریافت کنید:
 <br>
-<div style="text-align:left;" dir="ltr">
+<div style="text-align:left;direction: ltr;" dir="ltr">
 <pre><code>curl --request POST \
   --url https://auth.basalam.com/oauth/token \
   --header 'Content-Type: application/json' \
@@ -62,7 +62,7 @@ Salam API مجموعه‌ای از api‌های سرویس‌های باسلام
 	<li><b style="font-weight:bold">code:</b> کد یکبار مصرفی که به آدرس ریدارکت شما ارسال شده است.</li>
 </ul>
 در صورت صحیح بودن اطلاعات، پاسخ دریافتی به صورت زیر است:
-<div style="text-align:left;" dir="ltr">
+<div style="text-align:left;direction: ltr;" dir="ltr">
 <pre><code>{
 	"token_type": "Bearer",
 	"expires_in": 31622400,
