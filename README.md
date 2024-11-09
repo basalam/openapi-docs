@@ -42,17 +42,17 @@ Salam API مجموعه‌ای از api‌های سرویس‌های باسلام
 حالا باید با استفاده از code دریافتی ریکوئستی به فرمت زیر ارسال کنید که توکن کاربر را دریافت کنید:
 <br>
 <div style="text-align:left;" dir="ltr">
-<code>curl --request POST \
-  --url https://auth.basalam.com/oauth/token \
-  --header 'Content-Type: application/json' \
-  --header 'Accept: application/json' \
-  --data '{
-        "grant_type" : "authorization_code",
-        "client_id" : "[client_id]",
-        "client_secret" : "[client_secret]",
-        "redirect_uri" : "[redirect_uri]",
-        "code" : "[code]"
-}'
+<code>curl --request POST \<br>
+  --url https://auth.basalam.com/oauth/token \<br>
+  --header 'Content-Type: application/json' \<br>
+  --header 'Accept: application/json' \<br>
+  --data '{<br>
+        "grant_type" : "authorization_code",<br>
+        "client_id" : "[client_id]",<br>
+        "client_secret" : "[client_secret]",<br>
+        "redirect_uri" : "[redirect_uri]",<br>
+        "code" : "[code]"<br>
+}'<br>
 </code>
 </div>
 <ul>
@@ -63,12 +63,12 @@ Salam API مجموعه‌ای از api‌های سرویس‌های باسلام
 </ul>
 در صورت صحیح بودن اطلاعات، پاسخ دریافتی به صورت زیر است:
 <div style="text-align:left;" dir="ltr">
-<code>{
-	"token_type": "Bearer",
-	"expires_in": 31622400,
-	"access_token": "...",
-	"refresh_token": "..."
-}
+<code>{<br>
+	"token_type": "Bearer",<br>
+	"expires_in": 31622400,<br>
+	"access_token": "...",<br>
+	"refresh_token": "..."<br>
+}<br>
 </code>
 </div>
 <ul>
