@@ -1,2 +1,10 @@
-# openapi-docs
-Basalam Open APIs Documentation
+<link rel="stylesheet" href="/assets/fonts/Estedad-stylesheet.css" />
+
+# Salam API
+
+<div align="right" dir="rtl" style="font-family: 'Estedad', sans-serif;">
+
+Salam API مجموعه‌ای از api‌های سرویس‌های باسلام هست که امکان دسترسی به سرویس‌های باسلام را برای شما فراهم می‌کند. به واسطه api‌های ارائه شده شما می‌توانید با استفاده از استاندارد OAuth2 به اطلاعات کاربران اعم از غرفه‌داران و مشتریان دسترسی پیدا کنید و برنامه‌های خود را بر پایه آنها توسعه دهید.
+در این مستندات سعی شده است که توضیحات کاملی برای اتصال به api‌ها داده شود.
+
+</div>
