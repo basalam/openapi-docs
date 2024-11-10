@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="./assets/fonts/Estedad-stylesheet.css" />
 <link rel="stylesheet" href="./assets/css/highlight/default.min.css" />
-<script src="./assets/js/highlight/highlight.min.js"></script>
+<!-- <script src="./assets/js/highlight/highlight.min.js"></script> -->
 
 <div style="text-align: center;">
   <br>
@@ -13,7 +13,7 @@
   در این مستندات سعی شده است که توضیحات کاملی برای اتصال به api‌ها داده شود.
   </p>
   <hr>
-  <ul>
+  <ul dir="rtl">
     <li> شروع
       <ul>
         <li><a href="#%F0%9F%9A%80-%D8%B4%D8%B1%D9%88%D8%B9-%D8%AF%D8%B1%DB%8C%D8%A7%D9%81%D8%AA-%D8%AA%D9%88%DA%A9%D9%86-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1">دریافت توکن</a></li>
@@ -27,7 +27,7 @@
   <h2 style="font-weight:bold">🚀 شروع (دریافت توکن کاربر)</h2> ابتدا باید از <a href="https://developers.basalam.com/clients" target="_new">اینجا</a> یک کلاینت ایجاد کنید.
   کلاینت همان برنامه‌ی مدنظر شما جهت پیاده سازی است: <small><a href="https://developers.basalam.com/authorization#%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF-%DA%A9%D9%84%D8%A7%DB%8C%D9%86%D8%AA" target="_blank">(راهنما)</a></small>
   <br>
-  <ul>
+  <ul dir="rtl">
     <li>روی دکمه <b style="font-weight:bold">ایجاد کلاینت</b> کلیک کنید.</li>
     <li><b style="font-weight:bold">name:</b> نام کلاینت (برنامه) خود را وارد کنید.</li>
     <li><b style="font-weight:bold">redirect_url:</b> آدرسی از برنامهٔ شما که کاربر بعد از صدور (یا رد) اجازه‌های درخواستی به آن هدایت شود. <small><a href="https://developers.basalam.com/authorization#%D8%AF%D8%B1%DB%8C%D8%A7%D9%81%D8%AA-%D8%AF%D8%B3%D8%AA%D8%B1%D8%B3%DB%8C-%D8%A7%D8%B2-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1" target="_blank">(توضیحات بیشتر)</a></small></li>
@@ -38,7 +38,7 @@
   <div style="text-align:left;" dir="ltr">
   <code>https://basalam.com/accounts/sso?client_id=[client_id]&scope=[scope]&redirect_uri=[client_redirect_uri]&state=[state]</code>
   </div>
-  <ul>
+  <ul dir="rtl">
     <li><b style="font-weight:bold">client_id:</b> آی دی کلاینتی که ایجاد کردید. در <a href="https://developers.basalam.com/clients" target="_new">این صفحه</a> قابل مشاهده است.</li>
     <li><b style="font-weight:bold">scope:</b> رشته‌ای از <a href="https://developers.basalam.com/scopes" target="_blank">دسترسی‌های</a> درخواستی که با کاما "," یا فاصله جدا شده‌اند.</li>
     <li><b style="font-weight:bold">redirect_uri:</b>  آدرسی که کاربر بعد از اعطای دسترسی به آن هدایت می‌شود، این آدرس باید همان آدرسی باشد که در ایجاد کلاینت قرار داده‌اید.</li>
@@ -47,7 +47,7 @@
   </p>
   <p>
   در مرحله بعد که کاربر به لینک redirect_uri شما هدایت شد، اگر اجازه دسترسی را تایید کرده باشد دو پارامتر زیر برای شما ارسال می شود:
-  <ul>
+  <ul dir="rtl">
     <li><b style="font-weight:bold">code:</b> کد یک‌بار مصرف ایجاد شده توسط سرویس احراز هویت به منظور دریافت توکن</li>
     <li><b style="font-weight:bold">state:</b>  مقدار دلخواهی که در مرحله قبل ارسال کرده‌اید</li>
   </ul>
@@ -67,7 +67,7 @@
   }'
   </code></pre>
   </div>
-  <ul>
+  <ul dir="rtl">
     <li><b style="font-weight:bold">client_id:</b> آی دی کلاینتی که ایجاد کردید. در <a href="https://developers.basalam.com/clients" target="_new">این صفحه</a> قابل مشاهده است.</li>
     <li><b style="font-weight:bold">client_secret:</b>  رمز اختصاص داده شده به کلاینت. در <a href="https://developers.basalam.com/clients" target="_new">این صفحه</a> قابل مشاهده است.</li>
     <li><b style="font-weight:bold">redirect_uri:</b>  آدرسی که کاربر بعد از اعطای دسترسی به آن هدایت می‌شود، این آدرس باید همان آدرسی باشد که در ایجاد کلاینت قرار داده‌اید.</li>
@@ -83,7 +83,7 @@
   }
   </code></pre>
   </div>
-  <ul>
+  <ul dir="rtl">
     <li><b style="font-weight:bold">token_type:</b> نوع توکن برگشتی، که نوع Bearer هست.</li>
     <li><b style="font-weight:bold">expires_in:</b> زمان معتبر بودن توکن به ثانیه</li>
     <li><b style="font-weight:bold">access_token:</b> توکن کاربر</li>
@@ -188,7 +188,7 @@
   <h2>لیست APIها</h2>
   <p dir="rtl">
   <span>معماری باسلام براساس میکروسرویس است و هر بخش آن وبسرویس‌های مجزای خود را دارد که در لیست زیر دردسترس هستند:</span>
-  <ul>
+  <ul dir="rtl">
     <li><a href="https://developers.basalam.com/services#-%D9%87%D8%B3%D8%AA%D9%87-core" target="_blank">Core (هسته)</a></li>
     <li><a href="https://developers.basalam.com/services#-%DA%A9%DB%8C%D9%81-%D9%BE%D9%88%D9%84-wallet" target="_blank">Wallet (کیف پول)</a></li>
     <li><a href="https://developers.basalam.com/services#-%D8%B3%D9%81%D8%A7%D8%B1%D8%B4-order" target="_blank">Order (سفارش)</a></li>
@@ -200,7 +200,7 @@
 
 </div>
 
-<script>hljs.highlightAll();</script>
+<!-- <script>hljs.highlightAll();</script> -->
 
 
 
