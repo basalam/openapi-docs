@@ -1,4 +1,7 @@
 <link rel="stylesheet" href="./assets/fonts/Estedad-stylesheet.css" />
+<link rel="stylesheet" href="./assets/css/highlight/default.min.css">
+<script src="./assets/js/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 
 <div style="text-align: center;">
 <br>
@@ -11,8 +14,18 @@ Salam API مجموعه‌ای از api‌های سرویس‌های باسلام
 در این مستندات سعی شده است که توضیحات کاملی برای اتصال به api‌ها داده شود.
 </p>
 <hr>
+<ul>
+	<li> شروع
+		<ul>
+			<li><a href="#%D9%84%DB%8C%D8%B3%D8%AA-api%D9%87%D8%A7">دریافت توکن</a></li>
+			<li><a href="#%D9%84%DB%8C%D8%B3%D8%AA-api%D9%87%D8%A7">دریافت اطلاعات کاربر</a></li>
+			<li><a href="#%D9%84%DB%8C%D8%B3%D8%AA-api%D9%87%D8%A7">لیست APIها</a></li>
+		</ul>
+	</li>
+</ul>
+<hr>
 <p>
-🚀 <b style="font-weight:bold">برای شروع</b> ابتدا باید از <a href="https://developers.basalam.com/clients" target="_new">اینجا</a> یک کلاینت ایجاد کنید.
+<h2 style="font-weight:bold">🚀 شروع (دریافت توکن کاربر)</h2> ابتدا باید از <a href="https://developers.basalam.com/clients" target="_new">اینجا</a> یک کلاینت ایجاد کنید.
 کلاینت همان برنامه‌ی مدنظر شما جهت پیاده سازی است: <small><a href="https://developers.basalam.com/authorization#%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF-%DA%A9%D9%84%D8%A7%DB%8C%D9%86%D8%AA" target="_blank">(راهنما)</a></small>
 <br>
 <ul>
@@ -77,12 +90,105 @@ Salam API مجموعه‌ای از api‌های سرویس‌های باسلام
 	<li><b style="font-weight:bold">access_token:</b> توکن کاربر</li>
 	<li><b style="font-weight:bold">refresh_token:</b> توکنی برای دریافت توکن جدید زمانی که توکن کاربر منقضی شده</li>
 </ul>
+پس از دریافت توکن، آن را نزد خود ذخیره کنید و برای درخواست های بعدی آنرا در هدر Authorization ارسال کنید. 
 برای اطلاعات بیشتر <a href="https://developers.basalam.com/authorization#%D9%85%D8%B1%D8%AD%D9%84%D9%87-%D8%B3%D9%88%D9%85-%D8%AF%D8%B1%DB%8C%D8%A7%D9%81%D8%AA-%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1" target="_blank">این صفحه</a> را مشاهده کنید.
 </p>
-<hr/>
-<p>
-<h2>لیست APIها:</h2>
-<span>معماری باسلام براساس میکروسرویس است و هر بخش آن وبسرویس‌های مجزای خود را دارد که در لیست زیر دردسترس هستند</span>
+
+<h2>دریافت اطلاعات کاربر</h2>
+<p dir="rtl">
+پس از دریافت توکن کاربر، اولین قدم این است که اطلاعات کاربر را دریافت کنید و موارد مورد نیاز مانند شناسه کاربر (id) و شناسه غرفه کاربر (vendor->id) را برای درخواست های بعدی ذخیره کنید:
+
+<pre><code>curl --request GET \
+  --url https://core.basalam.com/v3/users/me \
+  --header 'Accept: application/json'
+  --header 'Authorization: Bearer [TOKEN]'
+</code></pre>
+
+بجای <code>[TOKEN]</code> باید توکن کاربر را که در مراحل قبل بعد از تایید دسترسی توسط کاربر دریافت کردید را قرار دهید.
+<br>
+نمونه ریسپانس:
+<pre><code>{
+  "id": 0, # شناسه عددی کاربر
+  "hash_id": "string", # شناسه هش کاربر
+  "username": "string", # نام کاربری
+  "name": "string", # نام کامل
+  "avatar": { # آبجکت عکس پروفایل
+    "id": 0, # کد فایل عکس
+    "original": "string", # آدرس عکس در سایز اصلی
+    "xs": "string", # آدرس عکس در سایز خیلی کوچک
+    "sm": "string", # آدرس عکس در سایز اسمال
+    "md": "string", # آدرس عکس در سایز مدیوم
+    "lg": "string" # آدرس عکس در سایز لارج
+  },
+  "marked_type": {
+    "name": "string",
+    "value": 0,
+    "description": "string"
+  },
+  "user_follower_count": 0,
+  "user_following_count": 0,
+  "gender": {
+    "name": "string",
+    "value": 0,
+    "description": "string"
+  },
+  "bio": "string",
+  "city": {
+    "name": "string",
+    "value": 0,
+    "province": {
+      "name": "string",
+      "value": 0,
+      "description": "string"
+    }
+  },
+  "created_at": "string",
+  "last_activity": "string",
+  "referral_journey_enum": {
+    "name": "string",
+    "value": 0,
+    "description": "string"
+  },
+  "is_banned_in_social": true,
+  "ban_user": {},
+  "vendor": {
+    "id": 0,
+    "identifier": "string",
+    "title": "string",
+    "description": "string",
+    "is_active": true,
+    "free_shipping_to_iran": 0,
+    "free_shipping_to_same_city": 0,
+    "worth_buy": "string",
+    "created_at": "string",
+    "activated_at": "string",
+    "order_count": 0,
+    "status": 0
+  },
+  "email": "string",
+  "birthday": "string",
+  "national_code": "string",
+  "mobile": "string",
+  "credit_card_number": "string",
+  "credit_card_owner": "string",
+  "foreign_citizen_code": "string",
+  "user_sheba_number": "string",
+  "user_sheba_owner": "string",
+  "bank_information": "string",
+  "bank_information_owner": "string",
+  "info_verification_status": {
+    "name": "string",
+    "value": 0,
+    "description": "string"
+  },
+  "referrer_user_id": 0
+}
+</code></pre>
+</p>
+
+<h2>لیست APIها</h2>
+<p dir="rtl">
+<span>معماری باسلام براساس میکروسرویس است و هر بخش آن وبسرویس‌های مجزای خود را دارد که در لیست زیر دردسترس هستند:</span>
 <ul>
 	<li><a href="https://developers.basalam.com/services#-%D9%87%D8%B3%D8%AA%D9%87-core" target="_blank">Core (هسته)</a></li>
 	<li><a href="https://developers.basalam.com/services#-%DA%A9%DB%8C%D9%81-%D9%BE%D9%88%D9%84-wallet" target="_blank">Wallet (کیف پول)</a></li>
@@ -92,6 +198,5 @@ Salam API مجموعه‌ای از api‌های سرویس‌های باسلام
 </ul>
 </p>
 
+
 </div>
-
-
