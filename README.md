@@ -54,7 +54,7 @@
   حالا باید با استفاده از code دریافتی ریکوئستی به فرمت زیر ارسال کنید که توکن کاربر را دریافت کنید:
   <br>
   <div style="text-align:left;direction: ltr;" dir="ltr">
-  <pre><code>curl --request POST \
+  <pre dir="ltr"><code dir="ltr">curl --request POST \
     --url https://auth.basalam.com/oauth/token \
     --header 'Content-Type: application/json' \
     --header 'Accept: application/json' \
@@ -97,7 +97,7 @@
   <p dir="rtl">
   پس از دریافت توکن کاربر، اولین قدم این است که اطلاعات کاربر را دریافت کنید و موارد مورد نیاز مانند شناسه کاربر (id) و شناسه غرفه کاربر (vendor->id) را برای درخواست های بعدی ذخیره کنید:
 
-  <pre><code>curl --request GET \
+  <pre dir="ltr"><code dir="ltr">curl --request GET \
     --url https://core.basalam.com/v3/users/me \
     --header 'Accept: application/json'
     --header 'Authorization: Bearer [TOKEN]'
@@ -106,7 +106,7 @@
   بجای <code>[TOKEN]</code> باید توکن کاربر را که در مراحل قبل بعد از تایید دسترسی توسط کاربر دریافت کردید را قرار دهید.
   <br>
   نمونه ریسپانس:
-  <pre><code>{
+  <pre dir="ltr"><code dir="ltr">{
     "id": 0, # شناسه عددی کاربر
     "hash_id": "string", # شناسه هش کاربر
     "username": "string", # نام کاربری
