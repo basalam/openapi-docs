@@ -36,7 +36,7 @@
   <p>
   بعد از ایجاد کلاینت خود، برای احراز هویت کاربران و گرفتن توکن کاربر لازم است دکمه ای در برنامه‌ی خود ایجاد کنید که کاربران را به لینکی با ساختار زیر هدایت میکند:<br>
   <div style="text-align:left;" dir="ltr">
-  <code>https://basalam.com/accounts/sso?client_id=[client_id]&scope=[scope]&redirect_uri=[client_redirect_uri]&state=[state]</code>
+  <code dir="ltr">https://basalam.com/accounts/sso?client_id=[client_id]&scope=[scope]&redirect_uri=[client_redirect_uri]&state=[state]</code>
   </div>
   <ul dir="rtl">
     <li><b style="font-weight:bold">client_id:</b> آی دی کلاینتی که ایجاد کردید. در <a href="https://developers.basalam.com/clients" target="_new">این صفحه</a> قابل مشاهده است.</li>
