@@ -1,16 +1,21 @@
-<link rel="stylesheet" href="./assets/fonts/Estedad-stylesheet.css" />
-<link rel="stylesheet" href="./assets/css/highlight/default.min.css">
-<script src="./assets/js/highlight/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
-
-<div style="text-align: center;">
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>OpenAPI Docs</title>
+    <link rel="stylesheet" href="./assets/fonts/Estedad-stylesheet.css" />
+    <link rel="stylesheet" href="./assets/css/highlight/default.min.css" />
+    <script src="./assets/js/highlight/highlight.min.js"></script>
+</head>
+<body>
+    <div style="text-align: center;">
 <br>
 <img class="oI3ssn" src="https://basalam.com/img/basalam-logotype.svg" alt="باسلام">
 </div>
 <br>
 <div align="right" dir="rtl" style="font-family: 'Estedad', -apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol', sans-serif; text-align: justify; direction: rtl;">
 <p>
-Salam API مجموعه‌ای از api‌های سرویس‌های باسلام هست که امکان دسترسی به سرویس‌های باسلام را برای شما فراهم می‌کند. به واسطه api‌های ارائه شده شما می‌توانید با استفاده از استاندارد OAuth2 به اطلاعات کاربران اعم از غرفه‌داران و مشتریان دسترسی پیدا کنید و برنامه‌های خود را بر پایه آنها توسعه دهید.
+<b style="font-weight:bold">سلام ای.پی.آی (Salam API)</b> مجموعه‌ای از api‌های سرویس‌های باسلام هست که امکان دسترسی به سرویس‌های باسلام را برای شما فراهم می‌کند. به واسطه api‌های ارائه شده شما می‌توانید با استفاده از استاندارد OAuth2 به اطلاعات کاربران اعم از غرفه‌داران و مشتریان دسترسی پیدا کنید و برنامه‌های خود را بر پایه آنها توسعه دهید.
 در این مستندات سعی شده است که توضیحات کاملی برای اتصال به api‌ها داده شود.
 </p>
 <hr>
@@ -18,7 +23,7 @@ Salam API مجموعه‌ای از api‌های سرویس‌های باسلام
 	<li> شروع
 		<ul>
 			<li><a href="#%F0%9F%9A%80-%D8%B4%D8%B1%D9%88%D8%B9-%D8%AF%D8%B1%DB%8C%D8%A7%D9%81%D8%AA-%D8%AA%D9%88%DA%A9%D9%86-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1">دریافت توکن</a></li>
-			<li><a href="#%D9%84%DB%8C%D8%B3%D8%AA-api%D9%87%D8%A7">دریافت اطلاعات کاربر</a></li>
+			<li><a href="#%D8%AF%D8%B1%DB%8C%D8%A7%D9%81%D8%AA-%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1">دریافت اطلاعات کاربر</a></li>
 			<li><a href="#%D9%84%DB%8C%D8%B3%D8%AA-api%D9%87%D8%A7">لیست APIها</a></li>
 		</ul>
 	</li>
@@ -200,3 +205,11 @@ Salam API مجموعه‌ای از api‌های سرویس‌های باسلام
 
 
 </div>
+    <!-- -->
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
+
+
+
+
