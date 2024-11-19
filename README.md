@@ -36,7 +36,7 @@
 ```
 https://basalam.com/accounts/sso?client_id=[client_id]&scope=[scope]&redirect_uri=[client_redirect_uri]&state=[state]
 ```
-متغیرها:
+* متغیرها:
 * **client_id:** آی دی کلاینتی که ایجاد کردید. در [این صفحه](https://developers.basalam.com/clients) قابل مشاهده است.
 * **scope:** رشته‌ای از [دسترسی‌های](https://developers.basalam.com/scopes) درخواستی که با کاما "," یا فاصله جدا شده‌اند.
 * **redirect_uri:** آدرسی که کاربر بعد از اعطای دسترسی به آن هدایت می‌شود، این آدرس باید همان آدرسی باشد که در ایجاد کلاینت قرار داده‌اید.
@@ -62,8 +62,7 @@ curl --request POST \
         "code" : "[code]"
 }'
 ```
-متغیرها:
-* متغیر
+* متغیرها:
 * **client_id:** آی دی کلاینتی که ایجاد کردید. در [این صفحه](https://developers.basalam.com/clients) قابل مشاهده است.
 * **client_secret:** رمز اختصاص داده شده به کلاینت. در [این صفحه](https://developers.basalam.com/clients) قابل مشاهده است.
 * **redirect_uri:** آدرسی که کاربر بعد از اعطای دسترسی به آن هدایت می‌شود، این آدرس باید همان آدرسی باشد که در ایجاد کلاینت قرار داده‌اید.
@@ -79,7 +78,7 @@ curl --request POST \
   "refresh_token": "..."
 }
 ```
-کلیدهای بازگشتی:
+* کلیدهای بازگشتی:
 * **token_type:** نوع توکن برگشتی، که نوع Bearer هست.
 * **expires_in:** زمان معتبر بودن توکن به ثانیه
 * **access_token:** توکن کاربر
