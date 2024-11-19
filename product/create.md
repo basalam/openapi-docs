@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./assets/fonts/Estedad-stylesheet.css" />
+<link rel="stylesheet" href="./../assets/fonts/Estedad-stylesheet.css" />
 
 # ثبت محصول جدید در غرفه
 
