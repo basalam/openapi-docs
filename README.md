@@ -36,7 +36,7 @@
 ```
 https://basalam.com/accounts/sso?client_id=[client_id]&scope=[scope]&redirect_uri=[client_redirect_uri]&state=[state]
 ```
-
+متغیرها:
 * **client_id:** آی دی کلاینتی که ایجاد کردید. در [این صفحه](https://developers.basalam.com/clients) قابل مشاهده است.
 * **scope:** رشته‌ای از [دسترسی‌های](https://developers.basalam.com/scopes) درخواستی که با کاما "," یا فاصله جدا شده‌اند.
 * **redirect_uri:** آدرسی که کاربر بعد از اعطای دسترسی به آن هدایت می‌شود، این آدرس باید همان آدرسی باشد که در ایجاد کلاینت قرار داده‌اید.
@@ -62,7 +62,7 @@ curl --request POST \
         "code" : "[code]"
 }'
 ```
-
+متغیرها:
 * **client_id:** آی دی کلاینتی که ایجاد کردید. در [این صفحه](https://developers.basalam.com/clients) قابل مشاهده است.
 * **client_secret:** رمز اختصاص داده شده به کلاینت. در [این صفحه](https://developers.basalam.com/clients) قابل مشاهده است.
 * **redirect_uri:** آدرسی که کاربر بعد از اعطای دسترسی به آن هدایت می‌شود، این آدرس باید همان آدرسی باشد که در ایجاد کلاینت قرار داده‌اید.
@@ -185,9 +185,5 @@ curl --request GET \
 
 معماری باسلام براساس میکروسرویس است و هر بخش آن وبسرویس‌های مجزای خود را دارد که در لیست زیر دردسترس هستند:
 
-* [Core (هسته)](https://developers.basalam.com/services#-%D9%87%D8%B3%D8%AA%D9%87-core)
-* [Wallet (کیف پول)](https://developers.basalam.com/services#-%DA%A9%DB%8C%D9%81-%D9%BE%D9%88%D9%84-wallet)
-* [Order (سفارش)](https://developers.basalam.com/services#-%D8%B3%D9%81%D8%A7%D8%B1%D8%B4-order)
-* [Order Processing (رهگیری سفارش)](https://developers.basalam.com/services#-%D8%B1%D9%87%DA%AF%DB%8C%D8%B1%DB%8C-%D8%B3%D9%81%D8%A7%D8%B1%D8%B4-order-processing)
-* [Search (جستجو)](https://developers.basalam.com/services#-%D8%AC%D8%B3%D8%AA%D8%AC%D9%88-search)
+[مشاهده لیست همه ای.پی.آی.‌ها](https://developers.basalam.com/services)
 
