@@ -1,3 +1,4 @@
+<!-- language: rtl -->
 <link rel="stylesheet" href="./assets/fonts/Estedad-stylesheet.css" />
 
 
