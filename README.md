@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="./assets/fonts/Estedad-stylesheet.css" />
 
-<div dir="rtl">
 
 <p align="center">
   <img src="https://basalam.com/img/basalam-logotype.svg" alt="باسلام">
@@ -192,4 +191,3 @@ curl --request GET \
 * [Order Processing (رهگیری سفارش)](https://developers.basalam.com/services#-%D8%B1%D9%87%DA%AF%DB%8C%D8%B1%DB%8C-%D8%B3%D9%81%D8%A7%D8%B1%D8%B4-order-processing)
 * [Search (جستجو)](https://developers.basalam.com/services#-%D8%AC%D8%B3%D8%AA%D8%AC%D9%88-search)
 
-</div>
